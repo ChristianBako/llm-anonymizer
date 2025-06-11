@@ -1,0 +1,19 @@
+[project]
+name = "llm-anon"
+version = "0.1.0"
+description = "CLI tool to anonymize code using local LLM before sending to Claude Code"
+requires-python = ">=3.9"
+dependencies = [
+    "click>=8.0.0",
+    "ollama>=0.3.0",
+    "typing-extensions>=4.0.0",
+]
+
+[project.scripts]
+llm-anon = "llm_anon.cli:main"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

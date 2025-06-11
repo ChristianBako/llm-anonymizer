@@ -1,0 +1,29 @@
+# LamaSoft-specific banned strings for validation
+# Company names and branding
+LamaSoft
+lamasoft
+LAMASOFT
+
+# Contact information
+info@lamasoft.com
+support@lamasoft.com
+security@lamasoft.com
+analytics@lamasoft.com
+1-800-LAMASOFT
+
+# API keys and credentials
+LS_prod_xk8f2m9n4p7q1w3e5r6t8y0u
+LamaSoft2024!SecurePass
+LamaSoftSecretSalt2024
+
+# URLs and domains
+api.lamasoft.com
+support.lamasoft.com
+https://api.lamasoft.com
+https://support.lamasoft.com
+
+# Product-specific terms
+LamaSoftCustomer
+LamaSoftLicenseManager
+lamasoft_tier
+lamasoft_admin_password
