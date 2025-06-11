@@ -2,12 +2,36 @@
 name = "llm-anon"
 version = "0.1.0"
 description = "CLI tool to anonymize code using local LLM before sending to Claude Code"
+authors = [
+    {name = "Christian Bakopoulos", email = "christian.bakopoulos@gmail.com"}
+]
+readme = "README.md"
+license = "MIT"
+keywords = ["anonymization", "llm", "code", "privacy", "claude", "ollama"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10", 
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Security",
+    "Topic :: Text Processing",
+]
 requires-python = ">=3.9"
 dependencies = [
     "click>=8.0.0",
     "ollama>=0.3.0",
     "typing-extensions>=4.0.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/ChristianBako/LLM-Anonymizer-"
+Repository = "https://github.com/ChristianBako/LLM-Anonymizer-.git"
+Issues = "https://github.com/ChristianBako/LLM-Anonymizer-/issues"
 
 [project.scripts]
 llm-anon = "llm_anon.cli:main"

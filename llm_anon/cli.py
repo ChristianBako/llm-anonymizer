@@ -34,7 +34,28 @@ def main(
     validation_config: Optional[str],
     max_retries: int
 ) -> None:
-    """Anonymize code files using a local LLM."""
+    """Anonymize code files using a local LLM.
+    
+    \b
+    EXAMPLES:
+      llm-anon code.py                              # Anonymize single file to stdout
+      llm-anon code.py -o clean.py                  # Save anonymized output
+      llm-anon src/ -r -o clean_src/                # Process entire directory
+      llm-anon code.py --validation-config banned.txt  # Use validation to ensure secrets removed
+      llm-anon api.py -m codellama -t 0.3           # Use different model with more creativity
+    
+    \b
+    VALIDATION CONFIG:
+    Create a text file with banned strings (one per line):
+      echo "MyCompany" > banned.txt
+      echo "secret_api_key" >> banned.txt
+      echo "internal.company.com" >> banned.txt
+    
+    \b
+    REQUIREMENTS:
+    - Ollama must be running locally (ollama serve)
+    - Model must be installed (ollama pull llama3.2)
+    """
     
     # Load validation config if provided
     validation = None
