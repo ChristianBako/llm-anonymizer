@@ -1,6 +1,6 @@
 [project]
 name = "llm-anon"
-version = "0.1.0"
+version = "0.1.1"
 description = "CLI tool to anonymize code using local LLM before sending to Claude Code"
 authors = [
     {name = "Christian Bakopoulos", email = "christian.bakopoulos@gmail.com"}

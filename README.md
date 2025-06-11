@@ -122,10 +122,10 @@ llm-anon api.py --preserve-strings --preserve-comments
 llm-anon ./src -r -v -o ./anonymized
 
 # Use validation to ensure sensitive strings are removed
-llm-anon code.py --validation-config banned_strings.txt -v
+llm-anon examples/lamasoft_example.py --validation-config examples/banned_strings.txt -v
 
 # Process with custom retry limit for stubborn validations
-llm-anon sensitive_code.py --validation-config company_secrets.txt --max-retries 5
+llm-anon examples/lamasoft_example.py --validation-config examples/banned_strings.txt --max-retries 5
 ```
 
 ## Supported Languages
@@ -151,6 +151,10 @@ Create a text file with banned strings (one per line). Comments start with `#`:
 echo "MyCompany" > banned_strings.txt
 echo "secret_api_key" >> banned_strings.txt
 echo "internal.company.com" >> banned_strings.txt
+
+# Or use the provided example
+cp examples/banned_strings.txt my_company_secrets.txt
+# Edit my_company_secrets.txt with your specific terms
 ```
 
 Or create a comprehensive config file:
@@ -174,7 +178,7 @@ MyCompanyCustomer
 MyCompanyLicenseManager
 ```
 
-**Pro tip**: Start with your company name, domain, and any API keys or internal URLs.
+**Pro tip**: Start with your company name, domain, and any API keys or internal URLs. Check out `examples/` for test files and sample configurations.
 
 ### How Validation Works
 
